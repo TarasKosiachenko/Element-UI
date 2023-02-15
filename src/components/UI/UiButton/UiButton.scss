@@ -1,0 +1,68 @@
+$success: #198754;
+$error: #c61b1b;
+$secondary: #2148bb;
+$white: #fff;
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px 20px;
+  min-width: 130px;
+  border-radius: 10px;
+  color: $white;
+  background: $secondary;
+  cursor: pointer;
+  // &.secondary {
+  //   background: $secondary;
+  //   color: #fff;
+  // }
+
+  &.text {
+    border: none;
+    background: $white;
+    &.success {
+      color: $success;
+    }
+    &.error {
+      color: $error;
+    }
+    &.secondary {
+      color: $secondary;
+    }
+  }
+
+  &.contained {
+    border: none;
+    color: $white;
+    &.success {
+      background: $success;
+    }
+    &.error {
+      background: $error;
+    }
+    &.secondary {
+      background: $secondary;
+    }
+  }
+  &.outlined {
+    background: $white;
+    &.success {
+      color: $success;
+      border: 1px solid $success;
+    }
+    &.error {
+      color: $error;
+      border: 1px solid $error;
+    }
+    &.secondary {
+      color: $secondary;
+      border: 1px solid $secondary;
+    }
+
+  }
+  &.disabled {
+    background: gray !important;
+    opacity: .6;
+    color: #535353;
+  }
+}

@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import UiButton from './components/UI/UiButton/UiButton';
 import './App.scss';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <UiButton
+      text="Text"
+      onClick={() => console.log('click')}
+      disabled={false}
+      variant="text" // text, contained, outlined
+      color="secondary" // success, error, secondary
+      size="small" // small, medium, large
+    />
+    <UiButton
+      text="Contained"
+      onClick={() => console.log('click')}
+      variant="contained" // text, contained, outlined
+      color="success" // success, error, secondary
+      size="small" // small, medium, large
+    />
+    <UiButton
+      text="Outlined"
+      onClick={() => console.log('click')}
+      disabled={false}
+      variant="outlined" // text, contained, outlined
+      color="error" // success, error, secondary
+      size="small" // small, medium, large
+    />
     </div>
   );
 }
