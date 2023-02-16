@@ -12,11 +12,6 @@ button {
   color: $white;
   background: $secondary;
   cursor: pointer;
-  // &.secondary {
-  //   background: $secondary;
-  //   color: #fff;
-  // }
-
   &.text {
     border: none;
     background: $white;
@@ -30,7 +25,6 @@ button {
       color: $secondary;
     }
   }
-
   &.contained {
     border: none;
     color: $white;
@@ -58,7 +52,6 @@ button {
       color: $secondary;
       border: 1px solid $secondary;
     }
-
   }
   &.disabled {
     background: gray !important;
