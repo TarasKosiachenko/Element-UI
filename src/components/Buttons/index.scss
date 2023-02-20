@@ -1,0 +1,23 @@
+.content {
+  padding: 2rem 4rem;
+
+  .demo {
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border: 2px solid #E7EBF0;
+    .size {
+      padding: 5px;
+      button {
+        margin: 8px;
+      }
+    }
+  }
+  .section {
+    padding-top: 40px;
+  }
+}

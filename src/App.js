@@ -1,9 +1,9 @@
-import Buttons from "./components/Buttons";
+import Buttons from "./components/Buttons/Buttons";
 import HomePage from "./components/HomePage/HomePage";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
 
-import logo from './img/logo.png'
+import logo from "./img/logo.png";
 
 function App() {
   return (
@@ -35,18 +35,24 @@ function App() {
         </span>
       </header>
       <nav>
-        <img src={logo} alt="logo" />
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="buttons">Buttons</Link>
-          </li>
-          <li>
-            <Link to="alert">Alert</Link>
-          </li>
-        </ul>
+        <div className="navigate">
+          <span>
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
+          </span>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="buttons">Buttons</Link>
+            </li>
+            <li>
+              <Link to="alert">Alert</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <main>
         <Routes>

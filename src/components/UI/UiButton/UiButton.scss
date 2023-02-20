@@ -1,61 +1,130 @@
-$success: #198754;
-$error: #c61b1b;
-$secondary: #2148bb;
-$white: #fff;
+$primary-color: #0275d8;
+$secondary-color: #7c8184;
+$success-color: #5cb85c;
+$warning-color: #f0ad4e;
+$danger-color: #d9534f;
+$dark-color: #2b2b2b;
+$text-color: #333;
+$white-color: #fff;
 
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 10px 20px;
-  min-width: 130px;
-  border-radius: 10px;
-  color: $white;
-  background: $secondary;
+.button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
   cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+
+  &.small {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  &.medium {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  &.large {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+
   &.text {
     border: none;
-    background: $white;
-    &.success {
-      color: $success;
-    }
-    &.error {
-      color: $error;
-    }
+    color: $primary-color;
+    background: $white-color;
     &.secondary {
-      color: $secondary;
+      color: $secondary-color;
+    }
+    &.success {
+      color: $success-color;
+    }
+    &.warning {
+      color: $warning-color;
+    }
+    &.danger {
+      color: $danger-color;
+    }
+    &.light {
+      color: #fff;
+    }
+    &.dark {
+      color: $dark-color;
+    }
+    &.disabled {
+      opacity: 0.4;
+      color: $text-color;
+      cursor: not-allowed;
     }
   }
+
   &.contained {
+    background: $primary-color;
+    color: white;
     border: none;
-    color: $white;
-    &.success {
-      background: $success;
-    }
-    &.error {
-      background: $error;
-    }
     &.secondary {
-      background: $secondary;
+      background: $secondary-color;
+    }
+    &.success {
+      background: $success-color;
+    }
+    &.warning {
+      background: $warning-color;
+    }
+    &.danger {
+      background: $danger-color;
+    }
+    &.light {
+      background: #fff;
+      color: $text-color;
+    }
+    &.dark {
+      background: $dark-color;
+      color: white;
+    }
+    &.disabled {
+      opacity: 0.4;
+      color: white;
+      background: $text-color;
+      cursor: not-allowed;
     }
   }
+
   &.outlined {
-    background: $white;
-    &.success {
-      color: $success;
-      border: 1px solid $success;
-    }
-    &.error {
-      color: $error;
-      border: 1px solid $error;
-    }
+    background: transparent;
+    color: $primary-color;
+    border: 1px solid $primary-color;
     &.secondary {
-      color: $secondary;
-      border: 1px solid $secondary;
+      color: $secondary-color;
+      border: 1px solid $secondary-color;
     }
-  }
-  &.disabled {
-    background: gray !important;
-    opacity: .6;
-    color: #535353;
+    &.success {
+      color: $success-color;
+      border: 1px solid $success-color;
+    }
+    &.warning {
+      color: $warning-color;
+      border: 1px solid $warning-color;
+    }
+    &.danger {
+      color: $danger-color;
+      border: 1px solid $danger-color;
+    }
+    &.light {
+      color: #fff;
+      border: 1px solid $primary-color;
+    }
+    &.dark {
+      color: $dark-color;
+      border: 1px solid $dark-color;
+    }
+    &.disabled {
+      opacity: 0.4;
+      color: $text-color;
+      border: 1px solid $text-color;
+      cursor: not-allowed;
+    }
   }
 }
