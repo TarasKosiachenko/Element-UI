@@ -65,6 +65,7 @@ const Buttons = () => {
 
       <div className="section">
         <h2>Disabled button</h2>
+        <p>Make buttons look inactive by adding the disabled prop to.</p>
         <div className="demo">
           <UiButton text="Contained" variant="contained" disabled />
           <UiButton text="Outlined" variant="outlined" disabled />
