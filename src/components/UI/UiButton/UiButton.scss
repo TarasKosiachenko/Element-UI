@@ -34,7 +34,7 @@ $white-color: #fff;
   &.text {
     border: none;
     color: $primary-color;
-    background: $white-color;
+    background: transparent;
     &.secondary {
       color: $secondary-color;
     }
@@ -54,7 +54,7 @@ $white-color: #fff;
       color: $dark-color;
     }
     &.disabled {
-      opacity: 0.4;
+      opacity: .4;
       color: $text-color;
       cursor: not-allowed;
       pointer-events: none;
@@ -108,7 +108,7 @@ $white-color: #fff;
       color: white;
     }
     &.disabled {
-      opacity: 0.4;
+      opacity: .4;
       color: white;
       background: $text-color;
       cursor: not-allowed;
@@ -167,7 +167,7 @@ $white-color: #fff;
       border: 1px solid $dark-color;
     }
     &.disabled {
-      opacity: 0.4;
+      opacity: .4;
       color: $text-color;
       border: 1px solid $text-color;
       cursor: not-allowed;

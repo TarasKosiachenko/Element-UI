@@ -1,0 +1,62 @@
+$primary-color: #0275d8;
+$secondary-color: #7c8184;
+$success-color: #5cb85c;
+$warning-color: #f0ad4e;
+$danger-color: #d9534f;
+$dark-color: #2b2b2b;
+$text-color: #333;
+$white-color: #fff;
+
+.svg {
+  &.primary {
+    fill: $primary-color;
+  }
+  &.secondary {
+    fill: $secondary-color;
+  }
+  &.success {
+    fill: $success-color;
+  }
+  &.warning {
+    fill: $warning-color;
+  }
+  &.danger {
+    fill: $danger-color;
+  }
+  &.light {
+    fill: $white-color;
+  }
+  &.dark {
+    fill: $dark-color;
+  }
+
+  &:hover {
+    fill: lighten($dark-color, 10%);
+  }
+  &.secondary:hover {
+    fill: darken($secondary-color, 10%);
+  }
+  &.success:hover {
+    fill: darken($success-color, 10%);
+  }
+  &.warning:hover {
+    fill: darken($warning-color, 10%);
+  }
+  &.danger:hover {
+    fill: darken($danger-color, 10%);
+  }
+  &.light:hover {
+    fill: darken($white-color, 10%);
+  }
+  &.primary:hover {
+    fill: darken($primary-color, 10%);
+  }
+}
+
+.disabledSvg {
+  opacity: .4;
+  cursor: not-allowed;
+  svg {
+    fill: #adadad !important
+  }
+}
