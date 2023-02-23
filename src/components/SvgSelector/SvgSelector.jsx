@@ -2,6 +2,16 @@ import UiSvgSelector from "../UI/UiSvgSelector/UiSvgSelector";
 import "./index.scss";
 
 const SvgSelector = () => {
+  const variants = [ "house", "youtube", "search", "github", "linkedin", "twitter", "facebook", "user" ]
+  const colors = [ "dark", "primary", "secondary", "success", "danger", "warning", "light" ];
+  const sizes = ["small", "medium", "large"];
+
+  const socialLinks = [
+    { variant: 'twitter', color: 'primary', link: 'https://twitter.com/' },
+    { variant: 'facebook', color: 'secondary', link: 'https://www.facebook.com/' },
+    { variant: 'youtube', color: 'danger', link: 'https://www.youtube.com/' },
+  ];
+
   return (
     <div className="content">
       <h1>Svg Selector</h1>
@@ -19,15 +29,9 @@ const SvgSelector = () => {
           If the parameter is missing, the 'svg' text is output by default
         </p>
         <div className="demo">
-          <UiSvgSelector />
-          <UiSvgSelector id="house" />
-          <UiSvgSelector id="youtube" />
-          <UiSvgSelector id="search" />
-          <UiSvgSelector id="github" />
-          <UiSvgSelector id="linkedin" />
-          <UiSvgSelector id="twitter" />
-          <UiSvgSelector id="facebook" />
-          <UiSvgSelector id="user" />
+          {variants.map((variant) => (
+            <UiSvgSelector key={variant} variant={variant} />
+          ))}
         </div>
       </div>
 
@@ -38,13 +42,9 @@ const SvgSelector = () => {
           (dark:default, primary, secondary, success, warning, danger, light)
         </p>
         <div className="demo">
-          <UiSvgSelector id="house" color="dark" />
-          <UiSvgSelector id="house" color="primary" />
-          <UiSvgSelector id="house" color="secondary" />
-          <UiSvgSelector id="house" color="success" />
-          <UiSvgSelector id="house" color="warning" />
-          <UiSvgSelector id="house" color="danger" />
-          <UiSvgSelector id="house" color="light" />
+          {colors.map((color) => (
+            <UiSvgSelector key={color} variant="house" color={color} />
+          ))}
         </div>
       </div>
 
@@ -52,9 +52,9 @@ const SvgSelector = () => {
         <h2>Size</h2>
         <p>Choose a size for the icon (small, medium, large).</p>
         <div className="demo">
-          <UiSvgSelector id="github" size="small" />
-          <UiSvgSelector id="github" size="medium" />
-          <UiSvgSelector id="github" size="large" />
+          {sizes.map((size) => (
+            <UiSvgSelector key={size} variant="github" size={size} />
+          ))}
         </div>
       </div>
 
@@ -62,9 +62,9 @@ const SvgSelector = () => {
         <h2>Link</h2>
         <p>Set the link to be opened when the Svg Selector is clicked.</p>
         <div className="demo">
-          <UiSvgSelector id="twitter" color="primary" link="https://twitter.com/" />
-          <UiSvgSelector id="facebook" color="secondary" link="https://www.facebook.com/" />
-          <UiSvgSelector id="youtube" color="danger" link="https://www.youtube.com/" />
+          {socialLinks.map((link) => (
+            <UiSvgSelector key={link.variant} {...link} />
+          ))}
         </div>
       </div>
 
@@ -72,9 +72,9 @@ const SvgSelector = () => {
         <h2>Disabled selector</h2>
         <p>Make the Svg Selector look inactive by adding the disabled prop.</p>
         <div className="demo">
-          <UiSvgSelector id="twitter" link="https://www.google.com/" disabled />
-          <UiSvgSelector id="twitter" link="https://www.google.com/" disabled />
-          <UiSvgSelector id="twitter" color="primary" link="https://www.google.com/" disabled />
+        {socialLinks.map((link) => (
+            <UiSvgSelector key={link.variant} {...link} disabled />
+          ))}
         </div>
       </div>
     </div>

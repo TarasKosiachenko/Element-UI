@@ -1,5 +1,6 @@
 import Buttons from "./components/Buttons/Buttons";
 import SvgSelector from "./components/SvgSelector/SvgSelector";
+import Alerts from "./components/Alerts/Alerts"
 import HomePage from "./components/HomePage/HomePage";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
@@ -12,10 +13,10 @@ function App() {
     <div style={{ display: "flex" }}>
       <header>
         <span>
-            <UiSvgSelector id="github" link="https://github.com/TarasKosiachenko/Element-UI" />
+          <UiSvgSelector variant="github" link="https://github.com/TarasKosiachenko/Element-UI" />
         </span>
         <span>
-          <UiSvgSelector id="search" />
+          <UiSvgSelector variant="search" />
         </span>
       </header>
       <nav>
@@ -46,6 +47,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="buttons" element={<Buttons />} />
           <Route path="svg" element={<SvgSelector />} />
+          <Route path="alert" element={<Alerts />} />
         </Routes>
       </main>
     </div>

@@ -1,41 +1,13 @@
+h1 {
+  text-align: center;
+}
 .homeContent {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  overflow: hidden;
+  height: 70vh;
+  border: 1px solid #eaeaea;
 }
-
 #pot {
-  top: 20%;
-  width: 150px;
-  position: absolute;
-  animation: linear infinite;
-  animation-name: run;
-  animation-duration: 7s;
-}
-
-@keyframes run {
-  0% {
-      left: 400px;
-  }
-
-  48% {
-      -webkit-transform: rotateY(0deg);
-  }
-
-  50% {
-      left: calc(100% - 250px);
-      -webkit-transform: rotateY(180deg);
-  }
-
-  98% {
-      -webkit-transform: rotateY(180deg);
-  }
-
-  100% {
-      left: 400px;
-      -webkit-transform: rotateY(0deg);
-  }
+  width: 20%;
+  min-width: 7em;
+  height: auto;
 }

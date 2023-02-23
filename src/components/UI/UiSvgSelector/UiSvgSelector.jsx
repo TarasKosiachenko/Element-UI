@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./UiSvgSelector.scss";
 
-function UiSvgSelector({ id, link = null, size, color, disabled = false }) {
+function UiSvgSelector({ variant, link = null, size, color, disabled = false }) {
   const handleClick = (event) => {
     if (disabled) {
       event.preventDefault();
@@ -29,7 +29,7 @@ function UiSvgSelector({ id, link = null, size, color, disabled = false }) {
 
   const svgSize = sizeMap[size] || sizeMap.medium;
 
-  switch (id) {
+  switch (variant) {
     case "search":
       return (
         <a href={link} target="_blank" rel="noreferrer" onClick={handleClick} className={svgClasses}>
@@ -159,7 +159,7 @@ function UiSvgSelector({ id, link = null, size, color, disabled = false }) {
 }
 
 UiSvgSelector.propTypes = {
-  id: PropTypes.string,
+  variant: PropTypes.string,
   link: PropTypes.string,
   size: PropTypes.oneOf(["small", "medium", "large"]),
   color: PropTypes.oneOf([
