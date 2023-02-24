@@ -1,15 +1,17 @@
-h1 {
-  text-align: center;
-}
-.contentWrapper {
-  height: calc(100vh - 130px);
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #e7ebf0;
-}
-#pot {
-  width: 20%;
-  min-width: 7em;
-  height: auto;
-  transform: translate(0, 0);
+.homePage {
+  h1 {
+    text-align: center;
+  }
+  .contentWrapper {
+    height: calc(100vh - 130px);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #e7ebf0;
+  }
+  #pot {
+    width: 20%;
+    min-width: 7em;
+    height: auto;
+    transform: translate(0, 0);
+  }
 }

@@ -45,8 +45,8 @@ function HomePage() {
   }, []);
 
   return (
-    <>
-      <h1 className="mt-5">Home Page</h1>
+    <div className="homePage">
+      <h1>Home Page</h1>
       <div className="contentWrapper">
         <div className="homeContent">
           <img
@@ -58,7 +58,7 @@ function HomePage() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
