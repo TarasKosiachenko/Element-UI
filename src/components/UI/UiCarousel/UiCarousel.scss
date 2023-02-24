@@ -4,72 +4,67 @@
   height: 100%;
   overflow: hidden;
   border-radius: 5px;
-}
 
-.carousel-container {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  scroll-snap-align: start;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  border: none;
-  background: none;
-  color: white;
-  cursor: pointer;
-}
-
-.carousel-button.prev {
-  left: 20px;
-}
-
-.carousel-button.next {
-  right: 20px;
-}
-
-.carousel-caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-
-  h3 {
-    text-align: center;
-    color: #fff;
-    width: 70%;
-    margin: auto;
-    padding: 30px 0;
+  .carousel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
 
-  & p {
-    text-align: center;
-    color: #fff;
-    width: 70%;
-    margin: auto;
+  .carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    scroll-snap-align: start;
+    transition: all .5s ease-in-out;
+    &.active {
+      opacity: 1;
+    }
   }
-}
 
-.carousel-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .carousel-button.prev {
+    left: 20px;
+  }
+
+  .carousel-button.next {
+    right: 20px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+
+    h3,p {
+      text-align: center;
+      color: #fff;
+      width: 70%;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

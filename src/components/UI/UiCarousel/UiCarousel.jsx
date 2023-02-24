@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./UiCarousel.scss";
 
-const UiCarousel = ({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const UiCarousel = ({ children, active = 0 }) => {
+  const [activeIndex, setActiveIndex] = useState(active);
 
   const handlePrevClick = () => {
     setActiveIndex(activeIndex === 0 ? children.length - 1 : activeIndex - 1);
@@ -14,18 +14,21 @@ const UiCarousel = ({ children }) => {
 
   const containerStyle = {
     transform: `translateX(-${activeIndex * 100}%)`,
-    transition: "transform 0.5s ease-in-out",
+    transition: "all .5s ease-in-out",
     width: `100%`,
   };
 
   return (
     <div className="carousel">
       <div className="carousel-container" style={containerStyle}>
-        {children.map((child, index) => (
-          <div className="carousel-item" key={index}>
-            {child}
-          </div>
-        ))}
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+              isActive: activeIndex === index,
+            });
+          }
+          return null;
+        })}
       </div>
       <button className="carousel-button prev" onClick={handlePrevClick}>
         &lt;
@@ -35,6 +38,18 @@ const UiCarousel = ({ children }) => {
       </button>
     </div>
   );
+};
+
+export const CarouselItem = ({ children, isActive }) => {
+  return (
+    <div className={`carousel-item ${isActive ? "active" : ""}`}>
+      {children}
+    </div>
+  );
+};
+
+export const CarouselCaption = ({ children }) => {
+  return <div className="carousel-caption">{children}</div>;
 };
 
 export default UiCarousel;
