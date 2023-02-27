@@ -5,6 +5,22 @@
   overflow: hidden;
   border-radius: 5px;
 
+  .animation {
+    .carousel-item {
+      opacity: 0;
+    }
+  }
+
+  .fade {
+    .carousel-item {
+      opacity: 0;
+      transition-property: opacity;
+      position: absolute;
+      transform: none;
+      transition: all 2s ease-in-out;
+    }
+  }
+
   .carousel-container {
     display: flex;
     flex-wrap: nowrap;
@@ -20,11 +36,12 @@
     position: relative;
     width: 100%;
     display: block;
-    opacity: 0;
     scroll-snap-align: start;
-    transition: all .5s ease-in-out;
+    transition: all .6s ease-in-out;
     &.active {
+      transition: all .6s ease-in-out;
       opacity: 1;
+      z-index: 1;
     }
   }
 
@@ -40,10 +57,12 @@
   }
 
   .carousel-button.prev {
+    z-index: 5;
     left: 20px;
   }
 
   .carousel-button.next {
+    z-index: 5;
     right: 20px;
   }
 

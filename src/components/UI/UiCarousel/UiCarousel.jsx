@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./UiCarousel.scss";
 
-const UiCarousel = ({ children, active = 0 }) => {
-  const [activeIndex, setActiveIndex] = useState(active);
+const UiCarousel = ({ children, active = 1, animation, fade }) => {
+  const [activeIndex, setActiveIndex] = useState(active - 1);
 
   const handlePrevClick = () => {
     setActiveIndex(activeIndex === 0 ? children.length - 1 : activeIndex - 1);
@@ -12,15 +12,15 @@ const UiCarousel = ({ children, active = 0 }) => {
     setActiveIndex(activeIndex === children.length - 1 ? 0 : activeIndex + 1);
   };
 
-  const containerStyle = {
+  const containerStyle = !fade ? {
     transform: `translateX(-${activeIndex * 100}%)`,
     transition: "all .5s ease-in-out",
     width: `100%`,
-  };
+  } : {};
 
   return (
     <div className="carousel">
-      <div className="carousel-container" style={containerStyle}>
+      <div className={`carousel-container ${animation ? 'animation': ''} ${fade ? 'fade': ''}`} style={containerStyle}>
         {React.Children.map(children, (child, index) => {
           if (React.isValidElement(child)) {
             return React.cloneElement(child, {
