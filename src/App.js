@@ -1,7 +1,8 @@
 import Buttons from "./components/Buttons/Buttons";
 import SvgSelector from "./components/SvgSelector/SvgSelector";
-import Alerts from "./components/Alerts/Alerts"
-import Carousels from "./components/Carousels/Carousels"
+import Alerts from "./components/Alerts/Alerts";
+import Carousels from "./components/Carousels/Carousels";
+import Accordions from "./components/Accordions/Accordions";
 import HomePage from "./components/HomePage/HomePage";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
@@ -43,6 +44,9 @@ function App() {
             <li>
               <Link to="carousels">Carousels</Link>
             </li>
+            <li>
+              <Link to="accordions">Accordions</Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -53,6 +57,7 @@ function App() {
           <Route path="svg" element={<SvgSelector />} />
           <Route path="alerts" element={<Alerts />} />
           <Route path="carousels" element={<Carousels />} />
+          <Route path="accordions" element={<Accordions />} />
         </Routes>
       </main>
     </div>

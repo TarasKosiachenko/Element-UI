@@ -1,0 +1,56 @@
+.ui-accordion {
+  width: 100%;
+  .accordion-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: margin 0.5s ease;
+
+    &.active {
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+      .accordion-header {
+        background-color: #0c62e436;
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+      .accordion-body {
+        visibility: visible;
+        height: auto;
+        max-height: 1;
+        padding: 16px;
+      }
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      cursor: pointer;
+      &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #333;
+        border-top: 2px solid #333;
+        transform: rotate(135deg);
+        margin-left: 8px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    .accordion-body {
+      background-color: #fff;
+      height: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      padding: 0 16px;
+    }
+  }
+}
