@@ -21,6 +21,9 @@ const List = () => {
       <li>
         <Link to="accordions">Accordions</Link>
       </li>
+      <li>
+        <Link to="cards">Cards</Link>
+      </li>
     </ul>
   );
 };

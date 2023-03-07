@@ -3,8 +3,9 @@ import SvgSelector from "./components/SvgSelector/SvgSelector";
 import Alerts from "./components/Alerts/Alerts";
 import Carousels from "./components/Carousels/Carousels";
 import Accordions from "./components/Accordions/Accordions";
+import Cards from "./components/Cards/Cards";
 import HomePage from "./components/HomePage/HomePage";
-import List from "./components/List/List "
+import List from "./components/List/List ";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="alerts" element={<Alerts />} />
           <Route path="carousels" element={<Carousels />} />
           <Route path="accordions" element={<Accordions />} />
+          <Route path="cards" element={<Cards />} />
         </Routes>
       </main>
     </div>
