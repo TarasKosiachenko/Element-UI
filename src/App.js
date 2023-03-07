@@ -4,6 +4,7 @@ import Alerts from "./components/Alerts/Alerts";
 import Carousels from "./components/Carousels/Carousels";
 import Accordions from "./components/Accordions/Accordions";
 import HomePage from "./components/HomePage/HomePage";
+import List from "./components/List/List "
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -28,26 +29,7 @@ function App() {
               <img src={logo} alt="logo" />
             </Link>
           </span>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="buttons">Buttons</Link>
-            </li>
-            <li>
-              <Link to="svg">Svg</Link>
-            </li>
-            <li>
-              <Link to="alerts">Alerts</Link>
-            </li>
-            <li>
-              <Link to="carousels">Carousels</Link>
-            </li>
-            <li>
-              <Link to="accordions">Accordions</Link>
-            </li>
-          </ul>
+          <List />
         </div>
       </nav>
       <main>
