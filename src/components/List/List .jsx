@@ -24,6 +24,9 @@ const List = () => {
       <li>
         <Link to="cards">Cards</Link>
       </li>
+      <li>
+        <Link to="dropdowns">Dropdowns</Link>
+      </li>
     </ul>
   );
 };

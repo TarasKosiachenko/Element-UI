@@ -85,3 +85,11 @@ main {
   max-width: 105ch;
   padding-top: $height-header;
 }
+
+code {
+  font-size: .875em;
+  color: #d63384;
+  background-color: rgba(255,229,100,.25);
+  padding: 0.1rem;
+  word-wrap: break-word;
+}

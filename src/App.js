@@ -6,6 +6,7 @@ import Accordions from "./components/Accordions/Accordions";
 import Cards from "./components/Cards/Cards";
 import HomePage from "./components/HomePage/HomePage";
 import List from "./components/List/List ";
+import Dropdowns from "./components/Dropdowns/Dropdowns";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="carousels" element={<Carousels />} />
           <Route path="accordions" element={<Accordions />} />
           <Route path="cards" element={<Cards />} />
+          <Route path="dropdowns" element={<Dropdowns />} />
         </Routes>
       </main>
     </div>
