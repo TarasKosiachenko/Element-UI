@@ -5,7 +5,7 @@ import Carousels from "./components/Carousels/Carousels";
 import Accordions from "./components/Accordions/Accordions";
 import Cards from "./components/Cards/Cards";
 import HomePage from "./components/HomePage/HomePage";
-import List from "./components/List/List ";
+import List from "./components/List/List";
 import Dropdowns from "./components/Dropdowns/Dropdowns";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";

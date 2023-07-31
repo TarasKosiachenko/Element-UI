@@ -22,7 +22,6 @@ nav {
   -webkit-flex-shrink: 0;
   .navigate {
     border-right: 2px solid $border-color;
-    overflow-y: auto;
     position: fixed;
     height: $height-fuul-screen;
     display: flex;
@@ -34,22 +33,6 @@ nav {
       img {
         height: auto;
         width: 55px;
-      }
-    }
-
-    ul {
-      list-style: none;
-      padding: 2rem;
-      li {
-        padding: 3px 0;
-        a {
-          color: #333;
-          font-weight: 700;
-          text-decoration: none;
-        }
-      }
-      li :hover {
-        color: #7b7b7b;
       }
     }
   }
