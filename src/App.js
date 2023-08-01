@@ -7,6 +7,7 @@ import Cards from "./components/Cards/Cards";
 import HomePage from "./components/HomePage/HomePage";
 import List from "./components/List/List";
 import Dropdowns from "./components/Dropdowns/Dropdowns";
+import DragnDrop from "./components/DragnDrop/DragnDrop";
 import "./App.scss";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="accordions" element={<Accordions />} />
           <Route path="cards" element={<Cards />} />
           <Route path="dropdowns" element={<Dropdowns />} />
+          <Route path="dragndrop" element={<DragnDrop />} />
         </Routes>
       </main>
     </div>

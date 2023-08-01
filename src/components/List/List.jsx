@@ -55,6 +55,9 @@ const List = () => {
         <li>
           <Link to="dropdowns">Dropdowns</Link>
         </li>
+        <li>
+          <Link to="dragndrop">Drag'n'Drop</Link>
+        </li>
       </ul>
     </div>
   );
