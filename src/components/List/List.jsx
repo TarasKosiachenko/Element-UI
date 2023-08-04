@@ -38,7 +38,7 @@ const List = () => {
           <Link to="buttons">Buttons</Link>
         </li>
         <li>
-          <Link to="svg">Svg</Link>
+          <Link to="svgselector">Svg</Link>
         </li>
         <li>
           <Link to="alerts">Alerts</Link>
